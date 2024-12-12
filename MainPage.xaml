@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.MainPage">
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Label Text="Rejestruj konto"
+               FontSize="24"
+               FontAttributes="Bold"
+               TextColor="White"
+               BackgroundColor="#008080"
+               HorizontalTextAlignment="Center"
+               VerticalOptions="Start"/>
+
+        <Label Text="Podaj e-mail:"
+               FontSize="16"
+               TextColor="Black" />
+        
+        <Entry Placeholder="email"
+               x:Name="EmailEntry"
+               Keyboard="Email"/>
+
+        <Label Text="Podaj hasło:"
+               FontSize="16"
+               TextColor="Black" />
+        
+        <Entry Placeholder="Wprowadź hasło"
+               x:Name="PasswordEntry"
+               IsPassword="True"/>
+
+        <Label Text="Powtórz hasło:"
+               FontSize="16"
+               TextColor="Black" />
+        
+        <Entry Placeholder="Powtórz hasło"
+               x:Name="ConfirmPasswordEntry"
+               IsPassword="True"/>
+
+        <Button Text="ZATWIERDŹ"
+                BackgroundColor="#008080"
+                TextColor="White"
+                HorizontalOptions="Center"
+                Clicked="OnSubmitClicked"/>
+
+        <Label x:Name="MessageLabel"
+               FontSize="14"
+               TextColor="Black"
+               HorizontalTextAlignment="Center"
+               VerticalOptions="CenterAndExpand"/>
+
+    </VerticalStackLayout>
+</ContentPage>
