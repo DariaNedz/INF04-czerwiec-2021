@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+class Sorter {
+  private:
+    int tab[10];
+
+    int max(int Index1) {
+        int Indexmax = Index1;
+        for (int i = Index1 + 1; i < 10; i++) {
+            if (tab[i] > tab[Indexmax]) {
+                Indexmax = i;
+            }
+        }
+        return Indexmax;
+    }
+
+  public:
+      void read() {
+          for (int i = 0; i < 10; i++) {
+              cin >> tab[i];
+          }
+      }
+      void sort() {
+          for (int i = 0; i < 9; i++) {
+              int Indexmax = max(i);
+              swap(tab[i], tab[Indexmax]);
+          }
+      }
+      void show() {
+          for (int i = 0; i < 10; i++) {
+              cout << tab[i] << " ";
+          }
+          cout << endl;
+      }
+};
+
+int main() {
+    Sorter s;
+    s.read();
+    s.sort();
+    s.show();
+    return 0;
+}
+
+// min, i, tab[10, int], class, sort, found max, private, return max
